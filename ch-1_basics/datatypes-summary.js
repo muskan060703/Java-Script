@@ -63,3 +63,27 @@ console.log(typeof myfun);
 
 */
 
+
+//***********MEMORY*********************
+
+//WE HAVE TWO TYPES OF MEMORY 
+//STACK (PREMITIVE) -copy
+//HEAP  (NON-PREMITIVE) - reference 
+
+let myname="muskan"
+
+let another_name=myname
+another_name="dhaka";
+console.log(myname);
+console.log(another_name);
+
+let user = {
+    email:"muskan",
+    upi:"abc"
+}
+
+let usertwo=user
+
+usertwo.email = "xyz"
+console.log(user.email);
+console.log(usertwo.email);
