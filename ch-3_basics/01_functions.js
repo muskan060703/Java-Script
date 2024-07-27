@@ -94,3 +94,4 @@ console.log(returnSecondValue(newArray));
 
 console.log(returnSecondValue([200,300,500,900]));
 
+
