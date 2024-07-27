@@ -37,3 +37,53 @@ console.log("object is empty");
 //fasle == "" ->true
 //0 == "" ->true
 
+
+//NULLISH COALSCING OPERATOR (??) : totally based on null , undefined 
+
+let val1;
+val1 = 5 ?? 10
+
+console.log(val1); //5
+console.log(val1); //5
+
+//we use ?? because sometimes when we call from database 
+// we dont get response directly 
+//instead
+//we get 2 values 
+//so there are chances of getting null or undefined values
+//so code structure can find difficulty 
+//so for these type of cases ?? is made
+
+
+val1 = null ?? 10 
+console.log(val1); //10
+
+
+val1 = null ?? undefined
+console.log(val1); //undefined 
+
+
+val1 = undefined ?? 10 
+console.log(val1); //10
+
+val1 = null ?? 10 ?? 15 //first value will be assigned 
+console.log(val1); //10
+
+
+// null COALSCING OPERATOR and ternary operator they both are different 
+
+//ternary operator 
+//smaller if else 
+// syntax :
+//condition ? true : false ;
+
+const iceTeaPrice = 100
+
+iceTeaPrice <=80 ? console.log("less than 80") : console.log("greater than 80");
+
+
+
+
+
+
+
