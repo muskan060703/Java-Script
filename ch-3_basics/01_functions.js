@@ -44,4 +44,53 @@ console.log(loginUserMessage()); //undefined
 
 
 
+//when we dont know how many arguments are to be passed
+// eg.  shopping cart 
+
+
+function calculatePrice(...num1) { //puts all the values in an array
+    return num1;
+}
+
+console.log(calculatePrice(299,500,699)); 
+
+//for this we have rest operator ...
+
+function cal(val1, val2,...num1) {
+    return num1;
+}
+
+console.log(cal(200,400,500,2000)); //o/p will be [500,2000]
+
+//passing objects to the function
+const user = {
+    username : "muskan",
+    price : 199
+}
+
+function handleObjects(anyobject) {
+    console.log(`username is : ${anyobject.username} and price is ${anyobject.price}`);
+
+}
+
+handleObjects(user);
+
+handleObjects(
+    {
+        username:"Sam",
+        price:399
+    }
+)
+
+//passing arrays to the functions 
+
+const newArray = [200,400,100,600]
+
+function returnSecondValue(getarray) {
+    return getarray[1];
+}
+
+console.log(returnSecondValue(newArray));
+
+console.log(returnSecondValue([200,300,500,900]));
 
