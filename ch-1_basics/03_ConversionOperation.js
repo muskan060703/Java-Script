@@ -103,3 +103,137 @@ console.log(gameCnt);
 If used prefix, with operator before operand (for example, ++x), 
 the increment operator increments and returns the value after incrementing. */
 
+
+
+
+
+
+
+
+
+
+
+
+//=======================REVIEW AGAIN==============================================================================================
+
+
+
+let score = "33abc" ;
+console.log(typeof(score)); //output of this is "number" which is in lower case 
+//or
+console.log(typeof score); //number is in lowe case 
+//taking one more variable 
+let score2 = "33";
+console.log( typeof score2); //output is string here
+let valueInNumber = Number(score); //most of the datatypes have capital starting N in Number (it will convert the value in score into 
+// number and store it in valueInNumber )
+console.log(typeof valueInNumber);
+console.log(valueInNumber); //NaN :=> not a number 
+
+//----------in case of null -> Number(null)
+
+let score3 = null;
+console.log(score3); //null
+console.log(typeof(score3)); //object 
+let valueInScore3 = Number(score3);
+console.log(valueInScore3); //0 
+
+
+//----------------in case of undefined -> Number(undefined)
+
+let score4 = undefined;
+console.log(score4); //undefined 
+console.log(typeof(score4)); //undefined 
+let valueInScore4 = Number(score4);
+console.log(valueInScore4); //NaN 
+
+
+
+//-----in case of boolean true/ false -> Number(true/false)
+
+
+let score5 = true;
+console.log(score5); //true
+console.log(typeof(score5)); //boolean
+let valueInScore5 = Number(score5); 
+console.log(valueInScore5); //1
+
+//-----------in case of string -> Number(string)
+
+let score6 = "abc"
+console.log(score6); //abc
+console.log(typeof(score6)); //string
+let valueInScore6 = Number(score6);
+console.log(valueInScore6); //NaN 
+
+
+
+ 
+//------------converting a number into a boolean 
+// ------------ 1 -> true and 0 -> false  and in case of empty stirng "" -> false 
+
+
+
+let isLoggedIn = 1;
+let booleanIsLoggedIn = Boolean(isLoggedIn);
+console.log(booleanIsLoggedIn); //true 
+
+//-------------in case of empty string "" -> false
+
+let stringLog = "";
+let boolStringLogged = Boolean(stringLog);
+console.log(boolStringLogged); //false 
+
+
+//-------------in case of some value in a string -> true 
+let stringLogVal = "abc";
+let boolLogVal = Boolean(stringLogVal);
+console.log(boolLogVal); //true 
+
+
+//--------------------conversion into string-----------------------------
+
+let number01 = 33;
+let stringNum1 = String(number01);
+console.log(stringNum1); //33
+console.log(typeof(stringNum1)); //string 
+
+
+
+//most of the time browsers gives us the values into string 
+
+
+/* 
+Numbers and the '+' operator
+In expressions involving numeric and string values with the + operator, 
+JavaScript converts numeric values to strings. For example, consider the following statements:
+
+
+x = "The answer is " + 42; // "The answer is 42"
+y = 42 + " is the answer"; // "42 is the answer"
+z = "37" + 7; // "377"
+
+
+
+With all other operators, JavaScript does not convert numeric values to strings. For example:
+
+
+"37" - 7; // 30
+"37" * 7; // 259
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
