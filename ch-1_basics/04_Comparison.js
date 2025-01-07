@@ -33,3 +33,7 @@ console.log(undefined >= 0); //false
 //checks the value as well as the data-type 
 
 console.log("2" === 2);
+
+
+
+

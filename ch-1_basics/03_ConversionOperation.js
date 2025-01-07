@@ -223,6 +223,71 @@ With all other operators, JavaScript does not convert numeric values to strings.
 */
 
 
+//string to number conversion 
+
+
+
+
+//---------------------------------OPERATIONS----------------------------------------
+let val = 3
+let neg_val = -value 
+console.log(negValue);
+
+
+console.log(2+2);
+console.log(2-2);
+console.log(2*2*2);
+console.log(2/3);
+console.log(2%3);
+
+
+let string1 = "abc"
+let string2 = " user"
+let string3 = string1 +  string2;
+console.log(string3);
+
+console.log(1+"2"); //12
+console.log("1"+2); //12
+console.log("1" + "2"); //12
+console.log("1"+2+2);   //122
+console.log(1+2+"2"); //32 
+console.log(true); //true
+console.log(+true); //boolean -> increment -> o/p --> 1
+console.log(+""); //0
+
+
+let number1, number2, number3 
+number1 = numbe2 = number3 = 2 + 2
+console.log(number1);
+
+
+let gameCounter = 100;
+gameCounter++;
+console.log(++gameCounter);
+
+//-------- FOR CONVERSION BETWEEN STRING TO INTEGER WE USE parseint() function 
+
+
+/* he parseInt() function parses a string argument and 
+returns an integer of the specified radix (the base in mathematical numeral systems).*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
