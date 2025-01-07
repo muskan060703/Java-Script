@@ -87,3 +87,59 @@ let usertwo=user
 usertwo.email = "xyz"
 console.log(user.email);
 console.log(usertwo.email);
+
+
+
+
+//Primitive datatypes or call by value 
+
+//7 types 
+//string number boolean null undefined symbol (to make the value unique) bigInt  
+
+
+//non primitive datatypes or reference type 
+
+// arrays, objects, functions 
+
+
+//js is dynamically typed language 
+
+const id1 = Symbol('123');
+
+const id2 = Symbol('123')
+
+console.log(id1 == id2); //false 
+//the value is same but the ids are unique in nature 
+
+
+const bigInt = 654613546315461453654675467n;
+//to make anumber bigInt we represtnt     n     in last 
+
+
+
+
+const hero = ["A","B","c"]; //array []
+
+const myobj = 
+{
+    name :"muskan",
+    age : 21,
+
+}
+
+
+
+const myfunction = function() {
+console.log("hello");
+
+} //object function 
+
+
+//typef function is used to get datatype 
+
+console.log(typeof myfunction);
+console.log(typeof myobj);
+console.log(typeof hero); 
+
+
+

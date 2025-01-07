@@ -56,3 +56,66 @@ console.log(gameName.split('-'));
 
 
 
+//------------string----------------
+const name1 = "user"
+const count = 50 
+console.log(name1+count +"vale");
+
+//new way to write ssstring is `` using back ticks 
+// with this we can inejct ny vairable within a string 
+
+console.log(`helllo this is ${name1} and count is ${count}`); //-> this is known as string interpolation 
+
+const gameName1 =  new String("pubg"); //we can also decare string using the objects 
+console.log(gameName1);
+
+//values are stored in the key-> value pairs 
+// idx 0 -> some value 
+//idx 1 -> some value and so on...
+
+console.log(gameName1[0]);
+
+//methods in string 
+
+console.log(gameName1.length); 
+console.log(gameName1.toUpperCase());
+console.log(gameName1.charAt(2));
+
+console.log(gameName1.indexOf('u'));
+
+const newstring1 = gameName1.substring(0,2); //substring methods will ignore the negative value and will makeit positive value 
+console.log(newstring1);
+
+const s2 = gameName1.slice(-2,-1); //we can give negative values  then it will start from right to left instead of left to right 
+console.log(s2);
+
+
+// trim 
+
+const s1 = "      username1            ";
+console.log(s1);
+console.log(s1.trim());
+
+ 
+
+//replace 
+
+const url1 = "https://username.com//username%20password "
+
+//replace %20 to - 
+console.log(url1.replace('%20','-'));
+
+
+console.log(url1.includes('username')); //true 
+
+
+
+const g1 = new String ('username-userid-password');
+console.log(g1.split('-')); //converts the stsring to an array with saperator - 
+
+
+
+
+
+
+
