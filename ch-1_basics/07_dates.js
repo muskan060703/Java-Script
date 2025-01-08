@@ -98,7 +98,7 @@ console.log(newDate);
 
 let d3 = Date.parse('04 Dec 1995 00:12:00 GMT'); // return's date's timestamp 
 console.log(d3);
-console.log(new Date(utcDate));
+
 
 
 
