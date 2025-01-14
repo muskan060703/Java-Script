@@ -178,3 +178,101 @@ console.log(array[1]);
 }
 
 handleArray(mynewArray);
+
+//variables are passed by value and objects are passed by reference 
+
+
+
+function func (myObj) {
+    myObj.make="toyota";
+}
+
+const obj1 = {
+    make : "honda"
+}
+
+console.log(obj1);
+func(obj1);
+console.log(obj1);
+
+
+
+//changes made in myarr will be reflected as it is passed by reference 
+function arr(myarr1) {
+    myarr1[0] = 40;
+}
+
+let myarr = [2,3];
+
+console.log(myarr);
+arr(myarr);
+console.log(myarr);
+
+
+// using functional expressions 
+
+//these are anonymous funcitons means they do not have any name but they are stored in some variables 
+const f1 = function(number) {
+    return number*number;
+}
+
+
+let ans = f1(5);
+console.log(ans);
+console.log(typeof(f1)); //function 
+
+//function with name in a vairable 
+
+const f2 = function fact(num) {
+    return num*num;
+}
+
+console.log(f2(5));
+
+
+
+//the innermost scope takes the highest precedence, while the outermost scope takes the lowest
+// This is the scope chain. The first on the chain is the innermost scope, and the last is the outermost scope.
+
+
+
+//closures : =>
+    // avaScript allows for the nesting of functions 
+    // and grants the inner function full access to all the variables and functions defined inside the outer function 
+
+
+
+    const pet = function(name) {
+        const n = function() {
+            return name;
+        }
+        return n;
+    }
+
+    const mypet = pet("dog"); // it is a function reference it returned a function n then to call n we have to write mypet()
+    console.log(mypet());
+    
+
+    //.argument property of function 
+    // => The arguments of a function are maintained in an array-like object.
+
+    function sum() {
+        let s = 0;
+        for(let i = 0; i < arguments.length; i++)
+        {
+            s+=arguments[i];
+        }
+        return s;
+    }
+
+    console.log(sum(1,2));
+    console.log(sum(1,2,4,5));
+    console.log(sum(87,4,5,6,7,8,9,109));
+    
+    
+    //converting the arguments into real array to use all the array properties 
+    function conversion() {
+        const a  = Array.prototype.slice(arguments);
+        console.log(a);
+    }
+    conversion(2,3,4,5)

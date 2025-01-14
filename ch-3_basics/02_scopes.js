@@ -983,4 +983,23 @@ console.log(addTwo(5)); //if we use it before function declaration then it will 
 //execution context 
 
 
+// -------------------------------------------- 
+//hoisting 
+function addsone(num)
+{
+    return num+1;
+}
+
+console.log(addsone(5));
+
+
+//expression it acts as a variable 
+const addtwos = function(num) {
+    return num+2;
+}
+
+console.log(addtwos(5));
+
+
+
 
