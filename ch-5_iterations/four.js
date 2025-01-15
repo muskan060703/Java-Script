@@ -92,3 +92,20 @@ for (const element of programming) {
 }
 
 
+//for_of 
+/*
+=>The for...of statement executes a loop that operates on a sequence of values sourced from an iterable object. 
+=>does not work for objects
+
+=>for (variable of iterable)
+  statement
+
+=> A for...of loop operates on the values sourced from an iterable one by one in sequential order.
+ */
+
+
+
+const elements = [1,2,3,4];
+for (const ele of elements) {
+    console.log(ele);  
+}
