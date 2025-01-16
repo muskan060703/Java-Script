@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body style = "background-color: black; color: white;">
+    <ul class = "language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName) {
+        const li = document.createElement('li');
+        li.innerHTML = `${langName}` // in this method the whole tree is traversed again and again to append the child 
+        const cl = document.querySelector('.language');
+        cl.appendChild(li);
+    }
+
+    addLanguage("python"); 
+    addLanguage("java");
+    
+
+
+    //optimized way of adding 
+
+    function addOptiLanguage(langName) {
+        const  li = document.createElement('li');
+        li.appendChild(document.createTextNode(langName));
+        document.querySelector('.language').appendChild(li);
+    }
+    addOptiLanguage("ruby");
+
+
+    //editing the value 
+
+    const secondLang = document.querySelector("li:nth-child(2)") // it will select the second child of li 
+    const newli = document.createElement('li');
+    newli.textContent = "mojo";
+    secondLang.replaceWith(newli);
+
+
+    //edit
+    const firstLang = document.querySelector("li:first-child");
+    firstLang.outerHTML = '<li>type script</li>'
+
+
+    //remove 
+    const lastLang = document.querySelector("li:last-child");
+    lastLang.remove();
+
+</script>
+</html>

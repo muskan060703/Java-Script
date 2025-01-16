@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: black; color: white;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const parent = document.querySelector('.parent');
+    console.log(parent);
+    
+//property to get the number of children in a parent 
+console.log(parent.children); //html collection is return type 
+
+
+
+
+//console.log(parent.children[1].innerHTML); //tuesday
+let n = parent.children.length;
+for (let index = 0; index < n; index++) {
+    console.log(parent.children[index].innerHTML);
+}
+
+
+
+
+parent.children[1].style.color = "orange";
+console.log(parent.firstElementChild); // trigger the first child of a parent 
+//It only returns element nodes. It ignores text nodes,
+//comment nodes, and other non-element nodes that might be present as children.
+console.log(parent.lastElementChild); // tigger the last child of a parent 
+
+
+
+
+
+//moving from child to parent 
+const day1 = document.querySelector('.day');
+console.log(day1);
+//going back to parent 
+console.log(day1.parentElement);
+//he parentElement property in the DOM allows you to move from a child element to its immediate parent element. 
+// This is useful when you want to traverse the DOM tree upward, accessing the parent of a given element.
+
+
+// moving to next element sibling 
+console.log(day1.nextElementSibling); //tuesday 
+
+
+
+console.log("NODES : ", parent.childNodes); 
+//he childNodes property in the DOM is used to access a live NodeList of all
+//  child nodes (including element nodes, text nodes, and comment nodes) of a specified parent element.
+//ncludes All Child Nodes: childNodes will return all types of child nodes, including:
+
+/*Element nodes (like <div>, <p>, etc.),
+Text nodes (spaces, line breaks, or text inside elements),
+Comment nodes (comments in HTML).*/ 
+//counting enter as text element 
+//it counts only one line break if there are continuously 2 line breaks then it will 
+// count only one line break then ignore 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</html>

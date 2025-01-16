@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style = "background-color: black;color: white;">
+    
+</body>
+<script>
+
+
+    let head = document.createElement('h1');
+    head.id = "top";
+    head.className = "main";
+    head.setAttribute("title","title 01");
+    head.style.background = "yellow";
+    head.style.color = "green";
+
+
+    const text = document.createTextNode("this is a heading");
+    head.appendChild(text);
+    document.body.appendChild(head);
+
+
+    let bd = document.createElement('h3');
+    bd.id="body-text";
+    bd.className = "main";
+    bd.setAttribute("title","body-text-01");
+    bd.style.backgroundColor = "orange";
+    bd.style.color = "blue";
+
+
+    bd.innerText = "we are doing data object model manipulation and this is a heading 3 tag that is made from the data object model manipulation";
+
+
+    document.body.appendChild(bd);
+    document.body.style.background = "pink";
+
+
+
+
+</script>
+</html>
