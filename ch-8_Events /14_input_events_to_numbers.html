@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Numeric input only</h1>
+    <label for = "numberInput">Enter a number</label>
+    <input type = "text" id = "numberInput" placeholder="only numbers are allowed"/>
+</body>
+<script>
+    const numberInput = document.getElementById('numberInput');
+    numberInput.addEventListener('input',(event) =>{
+        numberInput.value = numberInput.value.replace(/[^0-9]/g, '');
+    })
+</script>
+</html>

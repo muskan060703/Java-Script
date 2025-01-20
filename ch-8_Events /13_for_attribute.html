@@ -1,0 +1,30 @@
+<!--The for attribute in HTML is used to associate a <label> element with a form control, such as an <input> element. 
+    This attribute helps improve accessibility and usability by allowing users to click on the label to focus or activate 
+    the associated input field.
+    he value of the for attribute must match the id of the form control it is associated with.
+When the label is clicked, the browser automatically focuses on or activates the form control linked via the for attribute.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>for attribute</title>
+</head>
+<body>
+    <label for = "name">enter your name</label>
+    <input id = "name" type = "text" placeholder="your name here"/>
+    <br><br>
+    <label for = "condition">Agree with the terms and conditions</label>
+    <input type = "checkbox" id = "condition"/>
+
+    <!--with radio button-->
+    <br><br>
+    <label for = "male">Male</label>
+    <input type = "radio" id = "male" name = "gender" value = "male"/>
+
+    <br>
+    <label for = "female">Female</label>
+    <input type = "radio" id = "female" name = "gender" value = "female"/>
+
+</body>
+</html>

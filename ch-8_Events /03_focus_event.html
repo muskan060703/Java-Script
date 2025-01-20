@@ -1,0 +1,46 @@
+<!--The focus event fires when an element has received focus. 
+The event does not bubble, but the related focusin event that follows does bubble.-->
+<!--focus does not bubble-->
+
+
+<!--target is the reference to the object for which the event is dispatched -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>focus event </title>
+</head>
+<body style="background-color: black; color: wheat;">
+    <form id = "form">
+        <label>
+            enter your name :
+            <input type = "text" placeholder="enter your name"></input>
+        </label>
+        <br>
+        <br>
+        <br>
+        <label>
+            enter your password :
+            <input type = "password" placeholder = "enter password here" ></input>
+        </label>
+        <br>
+        <br>
+        <br>
+        <button type="submit">to submit </button>
+    </form>
+</body>
+<script>
+    const password = document.querySelector('input[type = "password" ]');
+
+    password.addEventListener('focus',(e)=> {
+        e.target.style.background = "lightblue";
+    })
+
+    const name = document.querySelector('input[type = "text"]');
+
+    name.addEventListener('blur',(e)=> {
+        e.target.style.background = "pink";
+    })
+</script>
+</html>

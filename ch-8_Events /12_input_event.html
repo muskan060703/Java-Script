@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>input events</title>
+</head>
+<body>
+    <h1> live text perview</h1>
+    <label for = "inputfield" >type something...</label>
+    <input type = "text" id = "inputfield" placeholder="type here.."/>
+    <p>Preview : <span id = "preview"></span></p>
+</body>
+<script>
+
+    const inputText = document.getElementById('inputfield');
+    const preview = document.getElementById('preview');
+
+
+    inputText.addEventListener('input',(e)=>{
+        preview.textContent = e.target.value;
+    })
+
+    </script>
+</html>

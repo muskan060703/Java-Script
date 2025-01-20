@@ -1,0 +1,36 @@
+<!--Triggered when a form is submitted.
+Default behavior involves sending the form data to the server,
+ but it can be prevented using event.preventDefault().-->
+
+
+ <!--form validation on submit-->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>submit addEventListener</title>
+ </head>
+ <body>
+    <form id = "myform">
+        <input type = "text" id = "name" placeholder="enter your name here" required/><br><br>
+        <button type="submit">Submit</button>
+    </form>
+ </body>
+ <script>
+    const myform = document.getElementById('myform');
+
+    myform.addEventListener('submit',(event) =>{
+        event.preventDefault();
+        const name = document.getElementById("name").value;
+        if(name) {
+            alert(`welcome ${name}`);
+        }
+        else {
+            alert(`Please enter your name`);
+        }
+
+    })
+ </script>
+ </html>

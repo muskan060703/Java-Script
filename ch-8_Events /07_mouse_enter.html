@@ -1,0 +1,50 @@
+<!--The mouseenter event is similar to mouseover, but it only triggers when the mouse enters the element itself,
+ not when it enters any of the child elements. This makes it more efficient than mouseover in certain situations, 
+as mouseover will trigger for both the element and its children, while mouseenter only triggers for the element itself.-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Enter</title>
+</head>
+<style>
+    #parent {
+        height: 500px;
+        width: 500px;
+        background-color: lightcoral;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+    #child {
+        height :250px;
+        width: 250px;
+        background-color: lightcyan;
+        align-items: center;
+        }
+</style>
+<body>
+    <div id = "parent">
+        hover me ! 
+        <div id="child">
+            child here
+        </div>
+    </div>
+</body>
+<script>
+    const parent = document.getElementById('parent');
+    const child = document.getElementById('child');
+
+
+    parent.addEventListener('mouseover',()=>{
+        parent.style.background = "red"
+    },false);
+
+    child.addEventListener('mouseover',()=> {
+        child.style.background = "green";
+    })
+
+</script>
+</html>

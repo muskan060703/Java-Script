@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "color">change color</button>
+</body>
+<script>
+    let i = document.querySelector("#color");
+
+    function rand(number) {
+        return Math.floor(Math.random() * (number+1));
+
+    }
+
+    // i.addEventListener("click",()=> {
+    //     let rndClr = `rgb(${rand(255)},${rand(255)},${rand(255)}`;
+    //     document.body.style.background = rndClr;
+    // },false);
+
+    i.addEventListener("dblclick",()=>{
+        document.body.style.backgroundColor = "black";
+    })
+</script>
+</html>

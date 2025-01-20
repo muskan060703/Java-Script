@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hover paragraph </title>
+</head>
+<body>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum nostrum magni at 
+        vero molestiae necessitatibus delectus ut doloremque eos fugit fugiat obcaecati maxime 
+        itaque dolorum expedita, amet et nesciunt ratione.</p>
+</body>
+<script>
+    const para = document.querySelector('p');
+
+    para.addEventListener('mouseenter',()=>{
+        para.style.color = "red";
+    })
+
+    para.addEventListener('mouseout',()=>{
+        para.style.color = "black";
+    })
+
+</script>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>key-down event</title>
+</head>
+<body>
+    <h1>Press key!</h1>
+    <p>key pressed : <span id = "key"></span></p>
+</body>
+<script>
+    document.addEventListener('keydown',(e)=>{
+        const key = e.key;
+        document.getElementById('key').textContent = key;
+    })
+</script>
+</html>
