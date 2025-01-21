@@ -195,3 +195,66 @@ function newGame() {
   });
 }
 ```
+
+#solution code
+##project 5
+```javascript
+console.log('Project 5');
+const insert = document.getElementById('insert');
+
+window.addEventListener('keydown', (event) => {
+  insert.innerHTML = `
+  <div class = 'color'>
+
+  <table>
+  <tr>
+  <th>Key</th>
+  <th>KeyCode</th>
+  <th>Code</th>
+  </tr>
+  <tr>
+  <td> ${event.key === ' ' ? 'space' : event.key}</td>
+  <td> ${event.keyCode}</td>
+  <td>${event.code} </td>
+  </tr>
+
+
+
+  </div>
+  `;
+});
+```
+
+
+#solution code 
+##project 6 
+```javascript
+//GENERATE A RANDOM COLOR
+const randomColor = function () {
+  const hex = '0123456789ABCDEF';
+  let clr = '#';
+  for (let i = 0; i < 6; i++) {
+    clr += hex[Math.floor(Math.random() * 16)];
+  }
+  return clr;
+};
+
+let id;
+const startChangingClr = function () {
+  if (!id) {
+    id = setInterval(changeClr, 1000);
+  }
+};
+function changeClr() {
+  document.body.style.backgroundColor = randomColor();
+}
+
+const stopChangingClr = function () {
+  clearInterval(id);
+  id = null;
+};
+
+document.querySelector('#start').addEventListener('click', startChangingClr);
+
+document.querySelector('#stop').addEventListener('click', stopChangingClr);
+```

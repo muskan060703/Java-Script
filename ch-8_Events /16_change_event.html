@@ -1,0 +1,25 @@
+<!--The change event in JavaScript is triggered when the value of an input, 
+<textarea>, or <select> element changes and loses focus (i.e.,
+     when the user navigates away from the field). -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change event</title>
+</head>
+<body>
+    <label for = "name">enter your name : </label>
+    <input type="text" id = "name" placeholder="enter name here" required />
+    <p id = "output"></p>
+</body>
+<script>
+    const nameInput = document.getElementById("name");
+    const output = document.getElementById("output");
+
+    nameInput.addEventListener('change',()=>{
+        output.textContent = `you entered : ${nameInput.value}`;
+    })
+</script>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Asynchronous</h1>
+    <button id = "stop">Stop</button>
+</body>
+<script>
+    //handler is a callback 
+    // setTimeout(()=>{
+    //     console.log("muskan"); 
+    //     //run only once
+    // },2000); 
+    // time in millisecond
+    //The setTimeout() method is used to execute a function or a block of code after a specified delay. 
+    // It's one of the simplest ways to handle asynchronous operations in JavaScript.
+
+
+
+    //The setInterval() method is used to repeatedly execute a specified function 
+    // or code snippet at a fixed time interval, measured in milliseconds. 
+    // It continues to run until it is explicitly stopped using clearInterval().
+
+    // const sayName = function(){
+    //     console.log("muskan");
+    // }
+    // setTimeout(sayName,2000);
+
+    const changetext = function () {
+    document.querySelector('h1').innerHTML = "Async JS";
+    }
+
+    const changeMe = setTimeout(changetext,2000);
+    //to stop the timeout The clearTimeout() method is used to cancel 
+    // a timeout previously established by a setTimeout() call. 
+    // It prevents the scheduled callback function from executing.
+    
+
+    document.querySelector('#stop').addEventListener('click',()=>{
+        console.log("stopped");
+        clearTimeout(changeMe);
+    })
+
+
+</script>
+</html>
