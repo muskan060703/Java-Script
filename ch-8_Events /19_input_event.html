@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Input event</title>
+  </head>
+  <body style="background-color: black; color: aliceblue">
+    <input type="text" id="username" placeholder="enter your username" />
+  </body>
+  <script>
+    const input = document.getElementById("username");
+    input.addEventListener("input", (e) => {
+      console.log(e.target.value);
+    });
+  </script>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Change event handler</title>
+  </head>
+  <body>
+    <label>Choose a fruit</label>
+    <select id="fruits">
+      <option value="apple">Apple</option>
+      <option value="orange">Orange</option>
+      <option value="cherry">Cherry</option>
+    </select>
+  </body>
+  <script>
+    const dropDown = document.getElementById("fruits");
+    dropDown.addEventListener("change", (e) => {
+      e.preventDefault();
+      alert(`you have selected ${e.target.value}`);
+    });
+  </script>
+</html>

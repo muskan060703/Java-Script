@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>select</title>
+  </head>
+  <body>
+    <textarea
+      id="address"
+      rows="4"
+      cols="50"
+      placeholder="add address"
+    ></textarea>
+  </body>
+  <script>
+    const address = document.getElementById("address");
+    address.addEventListener("select", (e) => {
+      const address = window.getSelection().toString();
+      console.log(`selected text : ${address}`);
+    });
+  </script>
+</html>
