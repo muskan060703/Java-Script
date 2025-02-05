@@ -1,0 +1,30 @@
+<!--earlier html http request were sent but for now we use fetch() -->
+<!--XML http request were sent earlier for api fetch-->
+<!--XML sends ajax request-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>XMLHTTP request</title>
+  </head>
+  <body style="background-color: black; color: white">
+    <script>
+      const requesturl = "https://randomuser.me/api/";
+      const xhr = new XMLHttpRequest();
+      //open(method(get,post,put),link)
+      //Client has been created. open() not called yet.
+      xhr.open("GET", requesturl);
+      xhr.onreadystatechange = function () {
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) {
+          const data = JSON.Parse(this.responseText);
+          console.log(data.results[0].gender);
+          //console.log(this.responseText);
+        }
+      };
+      xhr.send(); //now opened
+    </script>
+  </body>
+</html>
