@@ -1,0 +1,39 @@
+<!--Set Interval-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Set Interval--</title>
+  </head>
+  <body></body>
+  <script>
+    //It does not block the execution of the rest of the code; it schedules the callback to run repeatedly.
+    // const hello = setInterval(() => {
+    //   console.log("hello");
+    // }, 1000);
+    // //stopping an interval
+    // //clearInterval()
+    // setTimeout(() => {
+    //   clearInterval(hello);
+    //   console.log("interval stopped");
+    // }, 4000);
+
+    //creating a digital clock
+    // setInterval(() => {
+    //   const now = new Date();
+    //   console.log(now.toLocaleDateString());
+    // }, 1000);
+
+    //creatng countdown
+    let count = 10;
+    const cntdwn = setInterval(() => {
+      console.log(`countdown : ${count}`);
+      count--;
+      if (count < 0) {
+        clearInterval(cntdwn);
+        console.log("time is up");
+      }
+    }, 1000);
+  </script>
+</html>
