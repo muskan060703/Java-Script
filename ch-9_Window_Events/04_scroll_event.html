@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>scrollevent</title>
+  </head>
+  <style>
+    body {
+      height: 2000px;
+      background: linear-gradient(white, gray);
+    }
+  </style>
+  <body>
+    <h1>scroll the page</h1>
+    <script>
+      window.addEventListener("scroll", () => {
+        console.log(window.scrollX);
+
+        console.log(`scroll position : ${window.scrollY}px`);
+      });
+    </script>
+  </body>
+</html>

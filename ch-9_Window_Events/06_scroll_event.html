@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>div</title>
+    <style>
+      #container {
+        height: 300px;
+        width: 80%;
+        border: 2px solid red;
+        overflow-y: scroll;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <table id="studentData">
+        <tr>
+          <th>name</th>
+          <th>class</th>
+          <th>rollno</th>
+        </tr>
+      </table>
+    </div>
+  </body>
+  <script>
+    const containerDiv = document.getElementById("container");
+    const studentData = document.getElementById("studentData");
+
+    function getRow() {
+      for (let i = 1; i <= 15; i++) {
+        const row = document.createElement("tr");
+        //console.log(row);
+        const nameCol = document.createElement("td");
+        const classCol = document.createElement("td");
+        const rollnoCol = document.createElement("td");
+        nameCol.textContent = "user";
+        classCol.textContent = "4th";
+        rollnoCol.textContent = i;
+        row.appendChild(nameCol);
+        row.appendChild(classCol);
+        row.appendChild(rollnoCol);
+
+        studentData.appendChild(row);
+      }
+    }
+    getRow();
+    containerDiv.addEventListener("scroll", () => {
+      const top = containerDiv.scrollTop;
+      const height = containerDiv.clientHeight;
+      const totalHeight = containerDiv.scrollHeight;
+      if (top + height >= totalHeight) getRow();
+    });
+  </script>
+</html>
